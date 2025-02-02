@@ -1,0 +1,46 @@
+/*
+   *****In The Name Of ALLAH*****
+        author: Nafis Abdullah
+        always424.
+*/
+
+#include <bits/stdc++.h>
+using namespace std;
+
+using ll = long long;
+
+void init_code() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+}
+
+void always424() {
+    int n,r,b; cin >> n >> r >> b;
+    int div = b+1;
+    int interval = (r+div-1)/div;
+    string ans;
+    for(int i = 1;i<=r;i++){
+        ans.push_back('R');
+        if(i % interval == 0 && b > 0){
+            ans.push_back('B');
+            b--;
+        }
+    }
+    for(int i = 0;i<ans.size();i++){
+        cout << ans[i];
+        if(b > 0 && ans[i] == 'R' && ans[i+1] == 'R' && i + 1 < ans.size()){
+            cout << 'B';
+            b--;
+        }
+    }
+    cout <<"\n";
+}
+int main() {
+    init_code();
+    int t; cin >> t;
+    while(t--)
+    always424();
+}
+
+
