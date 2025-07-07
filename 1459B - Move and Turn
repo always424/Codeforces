@@ -1,0 +1,28 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+void naf() {
+    int n; cin >> n;
+
+    if(n % 2 == 0){
+        long long  x = ((n/2) + 1) * ((n/2) + 1);
+
+        cout << x;
+    }
+    else{
+        int k = n/2;
+        long long x = 2 * (k+1) * (k+2);
+
+        cout << x<< k; 
+    }
+}
+
+int main() {
+    // int t;
+    // cin >> t;
+    // while (t--)
+        naf();
+}
+
+
+ 
